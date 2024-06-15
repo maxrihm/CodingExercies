@@ -2,7 +2,6 @@
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using Markdig.Wpf;
 
 namespace CodingExercises
@@ -25,6 +24,9 @@ namespace CodingExercises
             if (File.Exists(_filePath))
             {
                 MarkdownEditor.Text = File.ReadAllText(_filePath);
+                _isEditMode = false; // Automatically switch to preview mode
+                MarkdownViewer.Markdown = MarkdownEditor.Text;
+                UpdateUI();
             }
             else
             {
@@ -56,34 +58,14 @@ namespace CodingExercises
             if (_isEditMode)
             {
                 MarkdownEditor.Visibility = Visibility.Visible;
-                MarkdownViewerContainer.Visibility = Visibility.Collapsed;
+                MarkdownViewer.Visibility = Visibility.Collapsed;
                 ToggleModeButton.Content = "Preview";
             }
             else
             {
                 MarkdownEditor.Visibility = Visibility.Collapsed;
-                MarkdownViewerContainer.Visibility = Visibility.Visible;
+                MarkdownViewer.Visibility = Visibility.Visible;
                 ToggleModeButton.Content = "Edit";
-            }
-        }
-
-        private void Window_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
-        {
-            if (!_isEditMode)
-            {
-                var scrollViewer = MarkdownViewerContainer;
-                if (scrollViewer != null)
-                {
-                    if (e.Delta < 0)
-                    {
-                        scrollViewer.LineDown();
-                    }
-                    else
-                    {
-                        scrollViewer.LineUp();
-                    }
-                    e.Handled = true;
-                }
             }
         }
     }
