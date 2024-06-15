@@ -2,7 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:md="clr-namespace:Markdig.Wpf;assembly=Markdig.Wpf"
-        Title="Markdown Editor" Height="800" Width="800">
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="Markdown Editor" Height="1200" Width="1900">
     <Canvas>
         <TextBox x:Name="FilePathTextBox" Width="400" Height="25" Canvas.Left="10" Canvas.Top="10"/>
         <Button Content="Load" Width="75" Height="25" Canvas.Left="420" Canvas.Top="10" Click="LoadButton_Click" />
@@ -21,5 +22,15 @@
                                    Visibility="Collapsed"/>
             </StackPanel>
         </ScrollViewer>
+
+        <wv2:WebView2 x:Name="WebViewFiddle" Width="1159" Height="1108" Canvas.Left="733" Canvas.Top="66" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <wv2:WebView2 x:Name="WebViewChat" Width="684" Height="566" Canvas.Left="10" Canvas.Top="592" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <TextBox x:Name="ParsedTaskTextbox" Canvas.Left="538" TextWrapping="Wrap" AcceptsReturn="True" Text="" Canvas.Top="143" Width="120" HorizontalAlignment="Center" Height="81" VerticalAlignment="Top"/>
+        <Label Content="Task" Canvas.Left="538" Canvas.Top="117" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBox x:Name="ParsedAnswerTextbox" Canvas.Left="538" TextWrapping="Wrap" AcceptsReturn="True" Text="" Canvas.Top="276" Width="120" Height="81" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Solution" Canvas.Left="538" Canvas.Top="250" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Content="Button" Canvas.Left="592" Canvas.Top="550"/>
     </Canvas>
 </Window>
