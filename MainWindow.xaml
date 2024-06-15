@@ -9,10 +9,10 @@
         <Button Content="Load" Width="75" Height="25" Canvas.Left="420" Canvas.Top="10" Click="LoadButton_Click" />
         <Button x:Name="ToggleModeButton" Content="Preview" Width="75" Height="25" Canvas.Left="500" Canvas.Top="10" Click="ToggleModeButton_Click" />
 
-        <ScrollViewer Width="500" Height="500" Canvas.Left="10" Canvas.Top="50" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Width="500" Height="400" Canvas.Left="10" Canvas.Top="50" VerticalScrollBarVisibility="Auto">
             <StackPanel>
                 <TextBox x:Name="MarkdownEditor" 
-                         Width="500" Height="500" 
+                         Width="500" Height="400" 
                          VerticalScrollBarVisibility="Auto" 
                          AcceptsReturn="True" 
                          TextWrapping="Wrap" 
@@ -24,14 +24,15 @@
         </ScrollViewer>
 
         <wv2:WebView2 x:Name="WebViewFiddle" Width="1159" Height="1004" Canvas.Left="733" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <wv2:WebView2 x:Name="WebViewChat" Width="684" Height="422" Canvas.Left="10" Canvas.Top="592" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <wv2:WebView2 x:Name="WebViewChat" Width="684" Height="519" Canvas.Left="10" Canvas.Top="495" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
         <TextBox x:Name="ParsedTaskTextbox" Canvas.Left="538" TextWrapping="Wrap" AcceptsReturn="True" Text="" Canvas.Top="143" Width="120" HorizontalAlignment="Center" Height="81" VerticalAlignment="Top"/>
         <Label Content="Task" Canvas.Left="538" Canvas.Top="117" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         <TextBox x:Name="ParsedAnswerTextbox" Canvas.Left="538" TextWrapping="Wrap" AcceptsReturn="True" Text="" Canvas.Top="276" Width="120" Height="81" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Label Content="Solution" Canvas.Left="538" Canvas.Top="250" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button x:Name="CheckAnswerButton" Content="Check" Canvas.Left="659" Canvas.Top="572" HorizontalAlignment="Left" VerticalAlignment="Center" Click="CheckAnswerButton_Click"/>
+        <Button x:Name="CheckAnswerButton" Content="Check" Canvas.Left="623" Canvas.Top="470" HorizontalAlignment="Left" VerticalAlignment="Center" Click="CheckAnswerButton_Click" Width="71"/>
         <Button x:Name="ResetButton" Click="ResetButton_Click " Content="🔄️" Canvas.Left="702" Canvas.Top="10" Height="26" Width="26"/>
+        <Button x:Name="ReloadChatButton" Content="Check" Canvas.Left="10" Canvas.Top="470" Click="ReloadChatButton_Click" Width="71" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Canvas>
 </Window>

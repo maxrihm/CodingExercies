@@ -108,5 +108,10 @@ namespace CodingExercises
             // Reload the chat web view
             WebViewChat.CoreWebView2.Navigate("https://chatgpt.com/?temporary-chat=true");
         }
+
+        private void ReloadChatButton_Click(object sender, RoutedEventArgs e)
+        {
+            WebViewChat.CoreWebView2.Navigate("https://chatgpt.com/?temporary-chat=true");
+        }
     }
 }
