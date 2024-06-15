@@ -17,7 +17,6 @@ namespace CodingExercises
             InitializeComponent();
             InitializeWebView2();
             UpdateUI();
-            FilePathTextBox.Text = "C:\\Users\\morge\\OneDrive\\Obsidian\\Obsidian Vault\\Interview\\Progress\\Tasks Delegates.md";
         }
 
         private async void InitializeWebView2()

@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:md="clr-namespace:Markdig.Wpf;assembly=Markdig.Wpf"
         xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
-        Title="Markdown Editor" Height="1200" Width="1950">
+        Title="Markdown Editor" Height="1040" Width="1920">
     <Canvas>
         <TextBox x:Name="FilePathTextBox" Width="400" Height="25" Canvas.Left="10" Canvas.Top="10"/>
         <Button Content="Load" Width="75" Height="25" Canvas.Left="420" Canvas.Top="10" Click="LoadButton_Click" />
@@ -23,8 +23,8 @@
             </StackPanel>
         </ScrollViewer>
 
-        <wv2:WebView2 x:Name="WebViewFiddle" Width="1159" Height="1108" Canvas.Left="733" Canvas.Top="66" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <wv2:WebView2 x:Name="WebViewChat" Width="684" Height="566" Canvas.Left="10" Canvas.Top="592" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <wv2:WebView2 x:Name="WebViewFiddle" Width="1159" Height="1004" Canvas.Left="733" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <wv2:WebView2 x:Name="WebViewChat" Width="684" Height="422" Canvas.Left="10" Canvas.Top="592" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
         <TextBox x:Name="ParsedTaskTextbox" Canvas.Left="538" TextWrapping="Wrap" AcceptsReturn="True" Text="" Canvas.Top="143" Width="120" HorizontalAlignment="Center" Height="81" VerticalAlignment="Top"/>
         <Label Content="Task" Canvas.Left="538" Canvas.Top="117" HorizontalAlignment="Center" VerticalAlignment="Center"/>
