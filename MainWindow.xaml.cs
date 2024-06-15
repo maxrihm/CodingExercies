@@ -80,5 +80,34 @@ namespace CodingExercises
                 ToggleModeButton.Content = "✏️";
             }
         }
+
+        private void CheckAnswerButton_Click(object sender, RoutedEventArgs e)
+        {
+            string taskText = ParsedTaskTextbox.Text;
+            string answerText = ParsedAnswerTextbox.Text;
+
+            string combinedText = $"I was doing coding exercise check it\r\nTask: {taskText}\nSolution: {answerText}";
+
+            WebViewChat.ExecuteScriptAsync($@"
+                var textarea = document.getElementById('prompt-textarea');
+                textarea.value = `{combinedText}`;
+                textarea.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                var event = new KeyboardEvent('keydown', {{ key: ' ' }});
+                textarea.dispatchEvent(event);
+                setTimeout(() => {{
+                    document.querySelector('button[data-testid=""fruitjuice-send-button""]').click();
+                }}, 100);
+            ");
+        }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Clear the task and solution text boxes
+            ParsedTaskTextbox.Text = string.Empty;
+            ParsedAnswerTextbox.Text = string.Empty;
+
+            // Reload the chat web view
+            WebViewChat.CoreWebView2.Navigate("https://chatgpt.com/?temporary-chat=true");
+        }
     }
 }

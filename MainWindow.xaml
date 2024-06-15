@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:md="clr-namespace:Markdig.Wpf;assembly=Markdig.Wpf"
         xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
-        Title="Markdown Editor" Height="1200" Width="1900">
+        Title="Markdown Editor" Height="1200" Width="1950">
     <Canvas>
         <TextBox x:Name="FilePathTextBox" Width="400" Height="25" Canvas.Left="10" Canvas.Top="10"/>
         <Button Content="Load" Width="75" Height="25" Canvas.Left="420" Canvas.Top="10" Click="LoadButton_Click" />
@@ -31,6 +31,7 @@
 
         <TextBox x:Name="ParsedAnswerTextbox" Canvas.Left="538" TextWrapping="Wrap" AcceptsReturn="True" Text="" Canvas.Top="276" Width="120" Height="81" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Label Content="Solution" Canvas.Left="538" Canvas.Top="250" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Content="Button" Canvas.Left="592" Canvas.Top="550"/>
+        <Button x:Name="CheckAnswerButton" Content="Check" Canvas.Left="659" Canvas.Top="572" HorizontalAlignment="Left" VerticalAlignment="Center" Click="CheckAnswerButton_Click"/>
+        <Button x:Name="ResetButton" Click="ResetButton_Click " Content="🔄️" Canvas.Left="702" Canvas.Top="10" Height="26" Width="26"/>
     </Canvas>
 </Window>
