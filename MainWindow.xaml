@@ -33,6 +33,6 @@
         <Label Content="Solution" Canvas.Left="538" Canvas.Top="250" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button x:Name="CheckAnswerButton" Content="Check" Canvas.Left="623" Canvas.Top="470" HorizontalAlignment="Left" VerticalAlignment="Center" Click="CheckAnswerButton_Click" Width="71"/>
         <Button x:Name="ResetButton" Click="ResetButton_Click " Content="🔄️" Canvas.Left="702" Canvas.Top="10" Height="26" Width="26"/>
-        <Button x:Name="ReloadChatButton" Content="Check" Canvas.Left="10" Canvas.Top="470" Click="ReloadChatButton_Click" Width="71" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="ReloadChatButton" Content="🗑️" Canvas.Left="10" Canvas.Top="470" Click="ReloadChatButton_Click" Width="27" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Canvas>
 </Window>
