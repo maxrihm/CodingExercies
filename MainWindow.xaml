@@ -22,8 +22,6 @@
                                    Visibility="Collapsed"/>
             </StackPanel>
         </ScrollViewer>
-
-        <wv2:WebView2 x:Name="WebViewFiddle" Width="1159" Height="1004" Canvas.Left="733" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <wv2:WebView2 x:Name="WebViewChat" Width="684" Height="519" Canvas.Left="10" Canvas.Top="495" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
         <TextBox x:Name="ParsedTaskTextbox" Canvas.Left="538" TextWrapping="Wrap" AcceptsReturn="True" Text="" Canvas.Top="143" Width="120" HorizontalAlignment="Center" Height="81" VerticalAlignment="Top"/>
@@ -34,5 +32,7 @@
         <Button x:Name="CheckAnswerButton" Content="Check" Canvas.Left="623" Canvas.Top="470" HorizontalAlignment="Left" VerticalAlignment="Center" Click="CheckAnswerButton_Click" Width="71"/>
         <Button x:Name="ResetButton" Click="ResetButton_Click " Content="🔄️" Canvas.Left="702" Canvas.Top="10" Height="26" Width="26"/>
         <Button x:Name="ReloadChatButton" Content="🗑️" Canvas.Left="10" Canvas.Top="470" Click="ReloadChatButton_Click" Width="27" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button Content="✅" Canvas.Left="510" Canvas.Top="50" Click="InsertMarkdownCheckbox"/>
+        <Button Content="💻" Canvas.Left="510" Canvas.Top="70" Click="InsertMarkdownCode" HorizontalAlignment="Center" VerticalAlignment="Top"/>
     </Canvas>
 </Window>

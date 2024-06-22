@@ -113,5 +113,32 @@ namespace CodingExercises
         {
             WebViewChat.CoreWebView2.Navigate("https://chatgpt.com/?temporary-chat=true");
         }
+
+        private void InsertMarkdownCheckbox(object sender, RoutedEventArgs e)
+        {
+            if (_isEditMode = true)
+            {
+                MarkdownEditor.Focus();
+                int cursorPosition = MarkdownEditor.SelectionStart;
+                string textToInsert = "- [x]"; // Replace with the text you want to insert
+
+                MarkdownEditor.Text = MarkdownEditor.Text.Insert(cursorPosition, textToInsert);
+                MarkdownEditor.SelectionStart = cursorPosition + textToInsert.Length;
+            }
+        }
+
+        private void InsertMarkdownCode(object sender, RoutedEventArgs e)
+        {
+            if (_isEditMode = true)
+            {
+                MarkdownEditor.Focus();
+                int cursorPosition = MarkdownEditor.SelectionStart;
+                string textToInsert = "```C#\n\n```"; // Replace with the text you want to insert
+
+                MarkdownEditor.Text = MarkdownEditor.Text.Insert(cursorPosition, textToInsert);
+                MarkdownEditor.SelectionStart = cursorPosition + textToInsert.Length;
+            }
+
+        }
     }
 }
